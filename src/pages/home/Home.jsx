@@ -1,5 +1,6 @@
 import { useProduct } from '@/api/hooks/useProduct'
 import Browce from '@/components/browce/Browce'
+import Furniture from '@/components/furniture/Furniture'
 import Hero from '@/components/hero/Hero'
 import Product from '@/components/product/Product'
 import React from 'react'
@@ -14,6 +15,7 @@ const Home = () => {
        <Hero />
        <Browce/>
        <Product data={data?.data?.products}/>
+       <Furniture/>
        
     </div>
   )

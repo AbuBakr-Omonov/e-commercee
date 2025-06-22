@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 
 const Product = ({ data }) => {
   const navigate = useNavigate()
+  
   return (
     <div className="container mx-auto px-4 py-8">
       <div>

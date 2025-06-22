@@ -17,7 +17,7 @@ const Hero = () => {
                         New Arrival
                     </p>
 
-                    <p className="text-[#B88E2F] font-pb leading-[65px] text-[52px] 
+                    <p className="text-[#B88E2F] mb-[17px] font-Pb leading-[65px] text-[52px] 
                    max-[1024px]:text-[42px] 
                    max-[768px]:text-[32px] 
                    max-[480px]:text-[24px] max-[480px]:leading-[38px]"

@@ -1,6 +1,7 @@
 import { useProduct } from '@/api/hooks/useProduct';
 import HeroShop from '@/components/heroShop/HeroShop';
 import ShopProduct from '@/components/shop/ShopProduct';
+import Support from '@/components/support/Support';
 import { Pagination } from 'antd';
 import React, { useState } from 'react'
 
@@ -20,6 +21,9 @@ const Shop = () => {
       <div className="mt-[30px] flex justify-center items-center">
         <Pagination current={page} onChange={handlChangePage} total={data?.data.total} pageSize={16} />
       </div>
+
+      <Support/>
+
 
     </div>
   )

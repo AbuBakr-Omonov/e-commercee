@@ -1,10 +1,12 @@
 import React from 'react'
 import Root from './pages/root'
+import NetworkStatus from './components/network-status/NetworkStatus'
 
 const App = () => {
   return (
-    <div className=''>
-      <Root/>
+    <div >
+        <NetworkStatus/>
+        <Root/>
     </div>
   )
 }

@@ -12,7 +12,9 @@ const Header = () => {
       <div className="container mx-auto  px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2 text-[34px] font-bold">
           <img src={logo} alt="" />
-          <h2>Furniro</h2>
+          <NavLink to="/" >
+            <h2>Furniro</h2>
+          </NavLink>
         </div>
         <nav className="hidden md:flex gap-6 text-gray-600 text-lg font-medium">
           <NavLink to="/" className={({ isActive }) => isActive ? "text-blue-600 font-Pm" : ""}>

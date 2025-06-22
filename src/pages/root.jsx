@@ -1,4 +1,5 @@
-import React, { lazy, Suspense } from 'react'
+import { Suspense } from '@/utils'
+import React, { lazy } from 'react'
 import { useRoutes } from 'react-router-dom'
 const Layout = lazy(() => import("./layout/Layout"))
 const  Home = lazy(() => import("./home/Home"))
