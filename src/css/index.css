@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Pr";
+    src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Pm";
+    src: url(../assets/fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Ps";
+    src: url(../assets/fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family: "Pb";
+    src: url(../assets/fonts//Poppins-Bold.ttf);
+}
+@theme {
+    --font-Pr: "Pr", "sans-serif";
+    --font-Pm: "Pm", "sans-serif"; 
+    --font-Ps: "Ps", "sans-serif";
+    --font-Pb: "Pb", "sans-serif";
+  
+}
+.container{
+    max-width: 1318px;
+    padding: 0 16px;
+}
