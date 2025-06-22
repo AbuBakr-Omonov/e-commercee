@@ -30,15 +30,18 @@ const Product = ({ data }) => {
             </div>
 
             <div className="p-3 flex flex-col gap-2 bg-[#F4F5F7] py-[30px] h-full">
-              <h3 className="text-sm font-medium line-clamp-2 text-[#3A3A3A] font-Ps text-[24px] max-[768px]:text-[20px] max-[540px]:text-[18px]">
+              <h3 className="text-sm font-medium line-clamp-1 text-[#3A3A3A] font-Ps text-[24px] max-[768px]:text-[20px] max-[540px]:text-[18px]">
                 {item.title}
               </h3>
               <p className="font-Pm text-[#898989] font-semibold text-sm max-[540px]:text-xs">
-                {item.availabilityStatus}
+                {item.shippingInformation}
               </p>
               <div className="flex items-center gap-1">
-                <p className="text-lg font-semibold text-[#3A3A3A] max-[540px]:text-base">
-                  Rb{item.price}
+                <p className="text-lg font-bold text-gray-800">
+                  {item.price.toLocaleString()}$
+                </p>
+                <p className="text-sm text-gray-400 line-through">
+                  {(item.price * 1.2).toFixed(0)}$
                 </p>
               </div>
             </div>
