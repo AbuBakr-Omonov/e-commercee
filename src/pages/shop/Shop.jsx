@@ -8,10 +8,9 @@ const Shop = () => {
   const { getProduct } = useProduct()
   const {page,setPage} = useState(1)
   const { data } = getProduct({ limit: 16 })
-  console.log(data?.data);
 
   const handlChangePage = (page) => {
-   setPage(page)
+    // setPage(page)
   };
   return (
     <div>
@@ -19,7 +18,7 @@ const Shop = () => {
       <ShopProduct data={data?.data?.products} />
 
       <div className="mt-[30px] flex justify-center items-center">
-        <Pagination current={2} onChange={handlChangePage} total={data?.data.total} pageSize={16} />
+        <Pagination current={page} onChange={handlChangePage} total={data?.data.total} pageSize={16} />
       </div>
 
     </div>

@@ -30,7 +30,7 @@ const ShopProduct = ({data}) => {
                   </button>
                 </div>
     
-                <div className="p-3 flex flex-col gap-2 bg-[#F4F5F7] py-[30px]">
+                <div className="p-3 flex flex-col gap-2 bg-[#F4F5F7] py-[30px] h-full">
                   <h3 className="text-sm font-medium line-clamp-2 text-[#3A3A3A] font-Ps text-[24px] max-[768px]:text-[20px] max-[540px]:text-[18px]">
                     {item.title}
                   </h3>
@@ -47,11 +47,6 @@ const ShopProduct = ({data}) => {
             ))}
           </div>
     
-          <div className="text-center mt-[32px]">
-            <button className="py-[12px] px-[74px] text-[#B88E2F] border border-[#B88E2F] transition-all duration-300 hover:bg-[#B88E2F] hover:text-white max-[540px]:px-[40px] max-[540px]:text-sm">
-              <Link to="/shop">Show More</Link>
-            </button>
-          </div>
         </div>
     
       )

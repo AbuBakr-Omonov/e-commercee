@@ -29,7 +29,7 @@ const Product = ({ data }) => {
               </button>
             </div>
 
-            <div className="p-3 flex flex-col gap-2 bg-[#F4F5F7] py-[30px]">
+            <div className="p-3 flex flex-col gap-2 bg-[#F4F5F7] py-[30px] h-full">
               <h3 className="text-sm font-medium line-clamp-2 text-[#3A3A3A] font-Ps text-[24px] max-[768px]:text-[20px] max-[540px]:text-[18px]">
                 {item.title}
               </h3>
