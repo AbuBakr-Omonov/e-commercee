@@ -17,16 +17,16 @@ const Header = () => {
           </NavLink>
         </div>
         <nav className="hidden md:flex gap-6 text-gray-600 text-lg font-medium">
-          <NavLink to="/" className={({ isActive }) => isActive ? "text-blue-600 font-Pm" : ""}>
+          <NavLink to="/" className={({ isActive }) => isActive ? "text-yellow-600 font-Pm" : ""}>
             Home
           </NavLink>
-          <NavLink to="/shop" className={({ isActive }) => isActive ? "text-blue-600 font-Pm" : ""}>
+          <NavLink to="/shop" className={({ isActive }) => isActive ? "text-yellow-600 font-Pm" : ""}>
             Shop
           </NavLink>
-          <NavLink to="/about" className={({ isActive }) => isActive ? "text-blue-600 font-Pm" : ""}>
+          <NavLink to="/about" className={({ isActive }) => isActive ? "text-yellow-600 font-Pm" : ""}>
             About
           </NavLink>
-          <NavLink to="/contact" className={({ isActive }) => isActive ? "text-blue-600 font-Pm" : ""}>
+          <NavLink to="/contact" className={({ isActive }) => isActive ? "text-yellow-600 font-Pm" : ""}>
             Contact
           </NavLink>
         </nav>

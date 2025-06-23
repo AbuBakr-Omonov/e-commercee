@@ -1,17 +1,18 @@
+import React, { useState } from 'react'
 import { useProduct } from '@/api/hooks/useProduct';
 import HeroShop from '@/components/heroShop/HeroShop';
 import ShopProduct from '@/components/shop/ShopProduct';
 import Support from '@/components/support/Support';
 import { Pagination } from 'antd';
-import React, { useState } from 'react'
 
 const Shop = () => {
   const { getProduct } = useProduct()
-  const {page,setPage} = useState(1)
-  const { data } = getProduct({ limit: 16 })
+  const [page,setPage] = useState(1)
+  const { data } = getProduct({ limit: 16 , skip:16 * (page - 1) })
 
   const handlChangePage = (page) => {
-    // setPage(page)
+    setPage(page);
+
   };
   return (
     <div>
