@@ -37,4 +37,4 @@ const Browce = () => {
     )
 }
 
-export default Browce
+export default React.memo(Browce)

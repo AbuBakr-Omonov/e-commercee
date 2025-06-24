@@ -25,7 +25,11 @@
     --font-Pb: "Pb", "sans-serif";
   
 }
+
 .container{
     max-width: 1318px;
     padding: 0 16px;
+}
+*{
+    scroll-behavior: smooth;
 }

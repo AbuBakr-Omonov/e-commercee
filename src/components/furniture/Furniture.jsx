@@ -15,4 +15,4 @@ const Furniture = () => {
   )
 }
 
-export default Furniture
+export default React.memo(Furniture)

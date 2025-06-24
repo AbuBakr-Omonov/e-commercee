@@ -1,33 +1,47 @@
 import React, { useState } from 'react'
 import { useProduct } from '@/api/hooks/useProduct';
 import HeroShop from '@/components/heroShop/HeroShop';
-import ShopProduct from '@/components/shop/ShopProduct';
 import Support from '@/components/support/Support';
-import { Pagination } from 'antd';
+import { Pagination, Select } from 'antd';
+import Product from '@/components/product/Product';
+import { useSearchParams } from 'react-router-dom';
 
 const Shop = () => {
   const { getProduct } = useProduct()
-  const [page,setPage] = useState(1)
-  const { data } = getProduct({ limit: 16 , skip:16 * (page - 1) })
 
-  const handlChangePage = (page) => {
-    setPage(page);
+  const [params, setParams] = useSearchParams()
+  const page = params.get("page") || 1
+  const pageSize = params.get("pageSize") || 16
+
+  const { data, isLoading } = getProduct({ limit: pageSize, skip: pageSize * (page - 1) })
+
+  const handlChangePage = (page, pageS) => {
+
+    if (pageS !== pageSize) {
+      params.set("pageSize", pageS)
+      params.set("page", "1")
+    } else {
+      params.set("page", page)
+    }
+    setParams(params)
+
 
   };
   return (
     <div>
       <HeroShop />
-      <ShopProduct data={data?.data?.products} />
+      
+      <Product data={data?.data?.products} loading={isLoading} count={16} />
 
       <div className="mt-[30px] flex justify-center items-center">
-        <Pagination current={page} onChange={handlChangePage} total={data?.data.total} pageSize={16} />
+        <Pagination current={page} onChange={handlChangePage} total={data?.data.total} pageSize={pageSize} />
       </div>
 
-      <Support/>
+      <Support />
 
 
     </div>
   )
 }
 
-export default Shop
+export default React.memo(Shop)

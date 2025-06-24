@@ -26,7 +26,7 @@ const HeroShop = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#F9F1E7] py-4 px-6 md:px-10">
+       <div className="bg-[#F9F1E7] py-4 px-6 md:px-10">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
 
           <div className="flex items-center gap-4 flex-wrap">
@@ -61,12 +61,12 @@ const HeroShop = () => {
           </div>
 
         </div>
-      </div>
-
+       </div>
+          
 
 
     </>
   )
 }
 
-export default HeroShop
+export default React.memo(HeroShop)

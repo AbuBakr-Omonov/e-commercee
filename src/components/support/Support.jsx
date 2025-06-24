@@ -47,4 +47,4 @@ const Support = () => {
   )
 }
 
-export default Support
+export default React.memo(Support)

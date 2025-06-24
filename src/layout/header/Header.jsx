@@ -31,10 +31,20 @@ const Header = () => {
           </NavLink>
         </nav>
         <div className="flex items-center gap-4 text-gray-700">
-          <User className="w-5 h-5 cursor-pointer hidden sm:block" />
-          <Search className="w-5 h-5 cursor-pointer hidden sm:block" />
-          <Heart className="w-5 h-5 cursor-pointer hidden sm:block" />
-          <ShoppingCart className="w-5 h-5 cursor-pointer hidden sm:block" />
+          <NavLink to={"*"}>
+               <User className="w-5 h-5 cursor-pointer hidden sm:block" />
+           </NavLink>
+           <NavLink to={"*"}>
+              <Search className="w-5 h-5 cursor-pointer hidden sm:block" />
+           </NavLink>
+           <NavLink to={"/wishlist"}>
+               <Heart className="w-5 h-5 cursor-pointer hidden sm:block" />
+           </NavLink>
+           <NavLink to={"/cart"}>
+               <ShoppingCart className="w-5 h-5 cursor-pointer hidden sm:block" />
+           </NavLink>
+
+           
           <div className="sm:hidden">
             <Button
               type="text"
@@ -59,10 +69,18 @@ const Header = () => {
           <NavLink to="/contact" onClick={() => setOpen(false)}>Contact</NavLink>
         </div>
         <div className="flex gap-4 mt-6 text-gray-700">
-          <User className="w-5 h-5 cursor-pointer" />
-          <Search className="w-5 h-5 cursor-pointer" />
-          <Heart className="w-5 h-5 cursor-pointer" />
-          <ShoppingCart className="w-5 h-5 cursor-pointer" />
+           <NavLink to={"*"}>
+               <User className="w-5 h-5 cursor-pointer " />
+           </NavLink>
+           <NavLink to={"*"}>
+              <Search className="w-5 h-5 cursor-pointer " />
+           </NavLink>
+           <NavLink to={"/wishlist"}>
+               <Heart className="w-5 h-5 cursor-pointer " />
+           </NavLink>
+           <NavLink to={"/cart"}>
+               <ShoppingCart className="w-5 h-5 cursor-pointer " />
+           </NavLink>
         </div>
       </Drawer>
     </header>
