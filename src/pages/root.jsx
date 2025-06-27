@@ -10,6 +10,7 @@ const ProductDeatail = lazy(() => import("./ProductDetailPage/ProductDeatailPage
 const Wishlist = lazy(() => import("./wishlist/wishlist"))
 const Cart = lazy(() => import("./cart/Cart"))
 const Checkout = lazy(() => import("./checkout/Checkout"))
+const Contact = lazy(() => import("./contact/Contact"))
 
 const Root = () => {
   return (
@@ -23,6 +24,7 @@ const Root = () => {
             {path:"/wishlist" , element:<Suspense><Wishlist/></Suspense>},
             {path:"/cart" , element:<Suspense><Cart/></Suspense>},
             {path:"/checkout" , element:<Suspense><Checkout/></Suspense>},
+            {path:"/contact" , element:<Suspense><Contact/></Suspense>},
             {path:"*" , element:<Suspense><NotFound/></Suspense>},
             {path:"/productDetail/:id" , element:<Suspense><ProductDeatail/></Suspense>},
           ]

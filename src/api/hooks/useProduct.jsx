@@ -14,7 +14,14 @@ export const useProduct = () => {
       queryFn: () => api.get(`/products/${id}`).then(res => res.data),
       enabled: !!id, 
     });
-    
-    return {getProduct , getProductById}
+
+    const getSearchProduct = (params) => 
+        useQuery({
+        queryKey:["product",params ],
+        queryFn: () => api.get(`/products/search`, {params}),
+        enabled: !!params.q
+    });
+
+    return {getProduct , getProductById , getSearchProduct}
 }
 

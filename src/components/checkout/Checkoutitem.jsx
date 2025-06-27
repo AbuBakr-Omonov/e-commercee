@@ -154,4 +154,4 @@ const Checkoutitem = ({ cart }) => {
     )
 }
 
-export default Checkoutitem
+export default React.memo(Checkoutitem)
