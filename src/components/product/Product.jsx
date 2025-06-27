@@ -36,12 +36,8 @@ const Product = ({ data, loading, count }) => {
   const dispach = useDispatch()
   const wishlist = useSelector(state => state.wishlist.value)
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div>
-        <p className="font-Pb mb-[32px] text-[40px] leading-[120%] text-center max-[990px]:text-[30px] max-[768px]:text-[25px] max-[540px]:text-[20px]">
-          Our Products
-        </p>
-      </div>
+    <div className="container mx-auto px-4 py-8 mt-[80px]">
+     
 
       <div className="grid grid-cols-4  sm:grid-cols-3 md:grid-cols-4 gap-6 max-[768px]:grid-cols-2 max-[540px]:grid-cols-1 max-[540px]:gap-10 ">
         {

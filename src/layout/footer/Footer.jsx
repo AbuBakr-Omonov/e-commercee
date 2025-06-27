@@ -1,11 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+ const  navigate = useNavigate()
   return (
     <footer className="bg-white border-t mt-10 px-4 py-10 md:px-10">
       <div className="container mx-auto  grid grid-cols-1 md:grid-cols-4 gap-8 text-sm text-gray-700">
         <div>
-          <h2 className="text-[24px] font-Pb mb-12">Funiro.</h2>
+          <h2 onClick={() => navigate("/")} className=" cursor-pointer text-[24px] font-Pb mb-12">Funiro.</h2>
           <p className="text-[#9F9F9F] font-Pr">
             400 University Drive Suite 200 Coral Gables,<br />
             FL 33134 USA

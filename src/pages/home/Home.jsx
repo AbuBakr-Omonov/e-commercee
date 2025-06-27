@@ -15,6 +15,11 @@ const Home = () => {
     <div>
       <Hero />
       <Browce />
+       <div>
+        <p className="font-Pb mb-[32px] text-[40px] leading-[120%] text-center max-[990px]:text-[30px] max-[768px]:text-[25px] max-[540px]:text-[20px]">
+          Our Products
+        </p>
+      </div>
       <Product data={data?.data?.products}  loading={isLoading} count={8} />
       <div className="text-center mt-[32px]">
         <button onClick={() => navigate("/shop")} className="py-[12px] px-[74px] text-[#B88E2F] border border-[#B88E2F] transition-all duration-300 hover:bg-[#B88E2F] hover:text-white max-[540px]:px-[40px] max-[540px]:text-sm">

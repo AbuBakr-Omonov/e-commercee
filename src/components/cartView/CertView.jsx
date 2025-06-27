@@ -2,10 +2,11 @@ import { decrementCart, incrementCart, removeCart } from '@/rudex/features/cart'
 import { DeleteOutlined } from '@ant-design/icons';
 import React from 'react'
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const CertView = ({ data }) => {
     const dispatch = useDispatch();
-
+     const  navigate = useNavigate()
     return (
         <div >
            <div className="container mx-auto mt-[74px] p-4 grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-10">
@@ -75,7 +76,7 @@ const CertView = ({ data }) => {
                     </span>
                 </div>
 
-                <button className="w-full mt-6 border border-black py-2 rounded-[15px] hover:bg-black hover:text-white transition-all">
+                <button onClick={() => navigate("/checkout")} className="w-full mt-6 border border-black py-2 rounded-[15px] hover:bg-black hover:text-white transition-all">
                     Check Out
                 </button>
             </div>
