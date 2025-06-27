@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import logo from "../../../public/vite.svg"
 import { User, Search, Heart, ShoppingCart, Menu } from 'lucide-react'
 import { Drawer, Button, Empty } from 'antd'
@@ -9,7 +9,7 @@ import useDebounce from '@/hooks/useDebouns'
 const Header = () => {
   const [open, setOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
-
+  const navigate = useNavigate()
   const searchRef = useRef()
   const { getSearchProduct } = useProduct()
   const [value, setValue] = useState("")
@@ -92,7 +92,7 @@ const Header = () => {
           <NavLink to={"/cart"}><ShoppingCart className="w-5 h-5 cursor-pointer" /></NavLink>
         </div>
       </Drawer>
-      
+
       {searchOpen && (
         <div ref={searchRef} className="absolute left-1/2 -translate-x-1/2 mt-2 w-full max-w-md bg-white shadow-xl rounded-md px-4 py-4 z-[100]">
           <input
@@ -108,6 +108,7 @@ const Header = () => {
             {value.trim() && data?.data?.products?.length ? (
               data.data.products.map((item) => (
                 <div
+                onClick={() => navigate(`/productDetail/${item.id}`)}
                   key={item.id}
                   className="flex items-center gap-3 py-2 px-2 hover:bg-gray-100 rounded transition"
                 >
